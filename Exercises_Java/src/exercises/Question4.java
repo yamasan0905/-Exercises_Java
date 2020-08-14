@@ -10,29 +10,27 @@ public class Question4 {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int[] numbers = new int[10];
 		
-		int count;
-		int sum;
-		
-		//@“ü—Í‚µ‚½”’l‚Ì‰ñ”‚ğ•\‚·•Ï”
-		int inputNumberCount = 10;
-		// “ü—Í‚µ‚½”’l‚Ì‡Œv‚ğ•\‚·•Ï”
-		int inputNumberSum = 100;
+		//ã€€å…¥åŠ›ã—ãŸå›æ•°ã‚’è¡¨ã™å¤‰æ•°
+		int inputNumberCount;
+		// åˆè¨ˆ
+		int total;
 		
 		
-		for (count = 0, sum = 0; count < inputNumberCount && sum <= inputNumberSum; count++) {
+		for (inputNumberCount = 0, total = 0; inputNumberCount < 10 && total <= 100; inputNumberCount++) {
 			try {
-				numbers[count] = Integer.parseInt(br.readLine());
+				numbers[inputNumberCount] = Integer.parseInt(br.readLine());
+				
 			} catch (NumberFormatException | IOException e) {
 				
 				e.printStackTrace();
 			}
-			sum += numbers[count]; // 100‚ğ’´‚¦‚é‚Ü‚Å‰ÁZ
+			total += numbers[inputNumberCount];// ãƒ­ãƒ¼ã‚«ãƒ«å¤‰æ•°totalã«ã€å¤‰æ•°numbers[inputNumberCount]ã«æ ¼ç´ã•ã‚ŒãŸæ•°å€¤ã‚’åŠ ç®—
 		}
 		
 		System.out.println();
 
-		// 100‚ğ’´‚¦‚½‚ç”’l‚ğo—Í
-		for (int i = 0; i < count; i++) {
+		// ãƒ–ãƒ­ãƒƒã‚¯å¤‰æ•°iãŒå¤‰æ•°inputNumberCountã‚ˆã‚Šå°ã•ã„é–“ã€å¤‰æ•°numbers[i]ã«æ ¼ç´ã•ã‚ŒãŸæ•°å€¤ã‚’è¡¨ç¤º
+		for (int i = 0; i < inputNumberCount; i++) {
 			System.out.println(numbers[i]);
 		}
 	}
